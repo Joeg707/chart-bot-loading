@@ -1,23 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChartBot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #00ffcc;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      background-color: #0f172a;
+      color: #cbd5e1;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .terminal-box {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #38bdf8;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { background-color: transparent; }
     }
   </style>
 </head>
-<body>
-  <h1>🚧 ChartBot is coming soon...</h1>
+<body class="p-8">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl mb-4 text-cyan-400">ChartBot</h1>
+    <p class="mb-8 text-lg">Automated crypto charting tools powered by AI and real-time data.</p>
+    <div class="terminal-box mb-8 text-left">
+      <p><span class="text-green-400">$</span> chartbot --analyze BTC/USDT</p>
+      <p>📈 Bullish divergence detected on 4H timeframe</p>
+      <p><span class="text-green-400">$</span> chartbot --predict ETH</p>
+      <p>🧠 AI Signal: Neutral / Range-bound expected</p>
+      <span class="cursor"></span>
+    </div>
+    <a href="#" class="inline-block bg-cyan-500 text-white px-6 py-2 rounded hover:bg-cyan-600">Get Started</a>
+  </div>
+  <footer class="mt-16 text-center text-sm text-slate-500">
+    © 2025 ChartBot • Powered by Tokenova
+  </footer>
 </body>
 </html>
